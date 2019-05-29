@@ -1,0 +1,80 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-5">Welcome to Weather API Demo! </h1>
+    <p>This demo will demonstrate connection to the OpenWeatherAPI and display 3 different API calls: </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-outline-primary btn-block" type="button" data-toggle="collapse"
+          data-target="#current-weather" aria-expanded="false" aria-controls="current-weather"
+          (click)="getCurrentWeatherData()">Current Weather
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-primary btn-block" type="button" data-toggle="collapse"
+          data-target="#hourly-forecast" aria-expanded="false" aria-controls="hourly-forecast">Hourly
+          Forecast</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-primary btn-block" type="button" data-toggle="collapse"
+          data-target="#daily-forecast" aria-expanded="false" aria-controls="daily-forecast">Daily
+          Forecast</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="collapse" id="current-weather">
+          <div class="card">
+            <div class="card-header">
+              Current Weather Data
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                <div [innerHTML]="currentWeatherData"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse" id="hourly-forecast">
+          <div class="card">
+            <div class="card-header">
+              Hourly Forecast
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                data about Hourly Foreacast here
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse" id="daily-forecast">
+          <div class="card">
+            <div class="card-header">
+              16 Day / Daily Forecast
+            </div>
+            <div class="card-body">
+              <div class="card-text">
+                data about Daily Forecast here
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
